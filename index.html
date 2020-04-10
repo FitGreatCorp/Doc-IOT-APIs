@@ -105,7 +105,7 @@
         <td>说明</td>
     </tr>
     <tr>
-        <td>https://login.fitgreat.cn/oauth/v2/token</td>
+        <td>https://login-test.fitgreat.cn/oauth/v2/token</td>
         <td>获取接入Token接口地址</td>
     </tr>
 </table></p>
@@ -114,7 +114,7 @@
      Host: server.example.com
      Content-Type: application/x-www-form-urlencoded
 
-     grant_type=client_credentials&amp;client_id=xxx&amp;client_secret=xxx
+     grant_type=client_credentials&amp;client_id=xxx&amp;client_secret=xxx&amp;scope=iot
 </code></pre>
 <hr />
 <p><strong>响应参数</strong>，包含以下内容：</p>
@@ -126,6 +126,7 @@
      {
        "access_token":"2YotnFZFEjr1zCsicMWpAA",
        "token_type":"access_token",
+       "scope":"iot"
        "expires_in":3600
      }
 </code></pre>
@@ -145,7 +146,7 @@
 <p><strong>请求参数</strong>，客户端发出的HTTP请求，包含以下参数：</p>
 <pre><code>     POST /patient/data HTTP/1.1
      Host: server.example.com
-     Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+     Authorization: Basic 2YotnFZFEjr1zCsicMWpAA
      Content-Type: application/x-www-form-urlencoded
 
      bed_id=xxx
@@ -221,5 +222,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-04-03 15:12:03
+Build Date UTC : 2020-04-10 07:19:15
 -->
